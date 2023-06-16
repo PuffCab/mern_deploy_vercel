@@ -1,7 +1,7 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
+import { serverURL } from "../utils/serverURL";
 
-type Props = {};
 type User = {
   userName: string;
   email: string;
@@ -14,7 +14,7 @@ interface FetchResutl {
   user: User;
 }
 
-const Login = (props: Props) => {
+const Login = () => {
   const [loginCredentials, setLoginCredentials] = useState<LoginCredentials>({
     email: "",
     password: "",
@@ -50,8 +50,12 @@ const Login = (props: Props) => {
     };
 
     try {
+      // const response = await fetch(
+      //   "http://localhost:5001/api/users/login",
+      //   requestOptions
+      // );
       const response = await fetch(
-        "http://localhost:5001/api/users/login",
+        `${serverURL}/api/users/login`,
         requestOptions
       );
 
@@ -59,7 +63,7 @@ const Login = (props: Props) => {
         const result: FetchResutl = await response.json();
         console.log("login sucess>>>>", result);
 
-        const { msg, token, user } = result;
+        const { token } = result;
 
         if (result.user && result.token) {
           localStorage.setItem("token", token);

@@ -1,13 +1,13 @@
-import React, { MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
+import { serverURL } from "../utils/serverURL";
 
-type Props = {};
-
-const Profile = (props: Props) => {
+const Profile = () => {
   const [userProfile, setUserProfile] = useState<User | null>(null);
   const [noTokenError, setNoTokenError] = useState<string>("");
 
   const getProfile = async (e: MouseEvent<HTMLButtonElement>) => {
+    console.log("e", e);
     const token = checkUserStatus();
     if (token) {
       const myHeaders = new Headers();
@@ -19,8 +19,12 @@ const Profile = (props: Props) => {
       };
 
       try {
+        // const response = await fetch(
+        //   "http://localhost:5001/api/users/userProfile",
+        //   requestOptions
+        // );
         const response = await fetch(
-          "http://localhost:5001/api/users/userProfile",
+          `${serverURL}/api/users/userProfile`,
           requestOptions
         );
         console.log("response", response);

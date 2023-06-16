@@ -22,7 +22,22 @@ const addMiddlewares = () => {
     })
   );
 
-  app.use(cors());
+  const allowedOrigins = [
+    "http://localhost:5174",
+    "https://deploy-kangaroos-client.netlify.app/",
+  ];
+  const corsOptions = {
+    origin: function (origin, callback) {
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  };
+
+  // app.use(cors());
+  app.use(cors(corsOptions));
   cloudinaryConfig();
 
   app.use(passport.initialize());

@@ -1,8 +1,7 @@
-import React, { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
+import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
+import { serverURL } from "../utils/serverURL";
 
-type Props = {};
-
-const Register = (props: Props) => {
+const Register = () => {
   const [selectedFile, setSelectedFile] = useState<File | string>("");
   const [newUser, setNewUser] = useState<RegistrationCredentials>({
     userName: "",
@@ -33,8 +32,13 @@ const Register = (props: Props) => {
     };
 
     try {
+      // const response = await fetch(
+      //   "http://localhost:5001/api/users/imageUpload",
+      //   requestOptions
+      // );
+
       const response = await fetch(
-        "http://localhost:5001/api/users/imageUpload",
+        `${serverURL}//api/users/imageUpload`,
         requestOptions
       );
       if (response.ok) {
@@ -49,6 +53,7 @@ const Register = (props: Props) => {
   };
 
   const register = async (e: MouseEvent<HTMLButtonElement>) => {
+    console.log(e);
     console.log("newUser", newUser);
 
     const myHeaders = new Headers();
@@ -72,8 +77,12 @@ const Register = (props: Props) => {
     };
 
     try {
+      // const response = await fetch(
+      //   "http://localhost:5001/api/users/register",
+      //   requestOptions
+      // );
       const response = await fetch(
-        "http://localhost:5001/api/users/register",
+        `${serverURL}/api/users/register`,
         requestOptions
       );
       const result = await response.json();
