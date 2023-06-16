@@ -58,6 +58,7 @@ const Login = () => {
         `${serverURL}/api/users/login`,
         requestOptions
       );
+      console.log("response", response);
 
       if (response.ok) {
         const result: FetchResutl = await response.json();
