@@ -1,0 +1,28 @@
+{
+  "workbench.colorTheme": "Dracula",
+  "editor.fontSize": 10,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ff337a",
+    "activityBar.background": "#ff337a",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#216000",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "panel.border": "#ff337a",
+    "sash.hoverBorder": "#ff337a",
+    "sideBar.border": "#ff337a",
+    "statusBar.background": "#ff0059",
+    "statusBar.border": "#ff0059",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#ff337a",
+    "statusBarItem.remoteBackground": "#ff0059",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#ff0059",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.border": "#ff0059",
+    "titleBar.inactiveBackground": "#ff005999",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#ff0059"
+}
