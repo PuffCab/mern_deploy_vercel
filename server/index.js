@@ -35,7 +35,7 @@ const addMiddlewares = () => {
 
   const allowedOrigins = [
     "http://localhost:5174",
-    "https://deploy-kangaroos-client.netlify.app/",
+    "https://deploy-kangaroos-client.netlify.app",
   ];
   const corsOptions = {
     origin: function (origin, callback) {
