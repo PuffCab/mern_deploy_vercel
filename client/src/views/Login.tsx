@@ -53,10 +53,10 @@ const Login = () => {
 
     try {
       //!fetching ONLY with local host
-      // const response = await fetch(
-      //   "http://localhost:5001/api/users/login",
-      //   requestOptions
-      // );
+      const response = await fetch(
+        "http://localhost:5001/api/users/login",
+        requestOptions
+      );
 
       //REVIEW[epic=deploy, seq=5] Once we deployed the server, we fetch the data from our API using vercel's URL+Endpoint
       //! fetching ONLY with deployed (server) URL
@@ -66,10 +66,10 @@ const Login = () => {
       // );
 
       //! Fetching with either local or deployed URL.
-      const response = await fetch(
-        `${serverURL}/api/users/login`,
-        requestOptions
-      );
+      // const response = await fetch(
+      //   `${serverURL}/api/users/login`,
+      //   requestOptions
+      // );
       console.log("response", response);
 
       if (response.ok) {
