@@ -24,9 +24,13 @@ const Profile = () => {
         //   requestOptions
         // );
         const response = await fetch(
-          `${serverURL}/api/users/userProfile`,
+          `https://test-deploy-server-flame.vercel.app/api/users/userProfile`,
           requestOptions
         );
+        // const response = await fetch(
+        //   `${serverURL}/api/users/userProfile`,
+        //   requestOptions
+        // );
         console.log("response", response);
 
         if (response.ok) {
