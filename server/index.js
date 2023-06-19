@@ -39,7 +39,7 @@ const addMiddlewares = () => {
     //REVIEW [epic=deploy, seq=3] the first origin should be the localhost port our client runs on. The second one, vercel's URL for our client
     "http://localhost:5174",
     // "https://mern-deploy-vercel-client.vercel.app",
-    "https://test-deploy-client-virid.vercel.app",
+    "https://mern-deploy-client.vercel.app",
   ];
   const corsOptions = {
     origin: function (origin, callback) {
@@ -51,8 +51,8 @@ const addMiddlewares = () => {
     },
   };
 
-  app.use(cors());
-  // app.use(cors(corsOptions));
+  // app.use(cors());
+  app.use(cors(corsOptions));
   cloudinaryConfig();
 
   app.use(passport.initialize());
