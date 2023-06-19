@@ -61,7 +61,7 @@ const Login = () => {
       //REVIEW [epic=deploy, seq=5] Once we deployed the server, we fetch the data from our API using vercel's URL+Endpoint
       //! fetching ONLY with deployed (server) URL
       const response = await fetch(
-        "https://test-deploy-server-flame.vercel.app/api/users/login",
+        "https://mern-deploy-vercel-phi.vercel.app/api/users/login",
         requestOptions
       );
 

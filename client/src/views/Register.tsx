@@ -38,7 +38,7 @@ const Register = () => {
       // );
 
       const response = await fetch(
-        `https://test-deploy-server-flame.vercel.app/api/users/imageUpload`,
+        `https://mern-deploy-vercel-phi.vercel.app/api/users/imageUpload`,
         requestOptions
       );
       // const response = await fetch(
@@ -86,7 +86,7 @@ const Register = () => {
       //   requestOptions
       // );
       const response = await fetch(
-        `https://test-deploy-server-flame.vercel.app/api/users/register`,
+        `https://mern-deploy-vercel-phi.vercel.app/api/users/register`,
         requestOptions
       );
       // const response = await fetch(
