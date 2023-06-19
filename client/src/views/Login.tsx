@@ -1,7 +1,7 @@
 //REVIEW[epic=deploy, seq=1] Get rid of all errors and warnings (unused import of react in ln2, unused state var in ln 23)
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
-import { serverURL } from "../utils/serverURL";
+// import { serverURL } from "../utils/serverURL";
 
 type User = {
   userName: string;
