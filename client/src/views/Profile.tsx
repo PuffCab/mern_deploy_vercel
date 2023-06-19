@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
-import { serverURL } from "../utils/serverURL";
+// import { serverURL } from "../utils/serverURL";
 
 const Profile = () => {
   const [userProfile, setUserProfile] = useState<User | null>(null);
