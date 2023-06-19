@@ -1,4 +1,6 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+//REVIEW [epic=delploy, seq=1] Get rid of all errors and warnings
+
+import react, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
 import { serverURL } from "../utils/serverURL";
 
@@ -19,6 +21,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [foo, setFoo] = useState(null);
 
   const [user, setUser] = useState<User | null>({
     userName: "",
