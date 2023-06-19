@@ -33,10 +33,10 @@ const addMiddlewares = () => {
 
   // app.use(allowCrossDomain);
 
-  //REVIEW [epic=deploy, seq=2] once the client is deployed we can add the URL to the list of allowed Origins
+  //REVIEW[epic=deploy, seq=2] once the client is deployed we can add the URL to the list of allowed Origins
 
   const allowedOrigins = [
-    //REVIEW [epic=deploy, seq=3] the first origin should be the localhost port our client runs on. The second one, vercel's URL for our client
+    //REVIEW[epic=deploy, seq=3] the first origin should be the localhost port our client runs on. The second one, vercel's URL for our client
     "http://localhost:5174",
     // "https://mern-deploy-vercel-client.vercel.app",
     "https://mern-deploy-client.vercel.app",
