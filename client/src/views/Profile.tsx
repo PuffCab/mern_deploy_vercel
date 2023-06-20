@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
-// import { serverURL } from "../utils/serverURL";
+import { serverURL } from "../utils/serverURL";
 
 const Profile = () => {
   const [userProfile, setUserProfile] = useState<User | null>(null);
@@ -23,14 +23,14 @@ const Profile = () => {
         //   "http://localhost:5001/api/users/userProfile",
         //   requestOptions
         // );
-        const response = await fetch(
-          `https://mern-deploy-vercel-server.vercel.app/api/users/userProfile`,
-          requestOptions
-        );
         // const response = await fetch(
-        //   `${serverURL}/api/users/userProfile`,
+        //   `https://mern-deploy-vercel-server.vercel.app/api/users/userProfile`,
         //   requestOptions
         // );
+        const response = await fetch(
+          `${serverURL}/api/users/userProfile`,
+          requestOptions
+        );
         console.log("response", response);
 
         if (response.ok) {

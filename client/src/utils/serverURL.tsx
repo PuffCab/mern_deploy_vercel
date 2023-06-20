@@ -2,10 +2,9 @@
 // The deployed URL could also be stored as .env variable, to hide it from the public.
 // console.log("firimport.meta.env.MODEst", import.meta.env.MODE);
 
-// const serverURL =
-//   import.meta.env.MODE === "development"
-//     ? "http://localhost:5001"
-//     : "https://mern-deploy-vercel-phi.vercel.app";
+const serverURL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:5001"
+    : "https://mern-deploy-vercel-server.vercel.app";
 
-const serverURL = "dummy variable";
 export { serverURL };

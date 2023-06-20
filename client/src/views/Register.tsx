@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
-// import { serverURL } from "../utils/serverURL";
+import { serverURL } from "../utils/serverURL";
 
 const Register = () => {
   const [selectedFile, setSelectedFile] = useState<File | string>("");
@@ -37,14 +37,14 @@ const Register = () => {
       //   requestOptions
       // );
 
-      const response = await fetch(
-        `https://mern-deploy-vercel-server.vercel.app/api/users/imageUpload`,
-        requestOptions
-      );
       // const response = await fetch(
-      //   `${serverURL}/api/users/imageUpload`,
+      //   `https://mern-deploy-vercel-server.vercel.app/api/users/imageUpload`,
       //   requestOptions
       // );
+      const response = await fetch(
+        `${serverURL}/api/users/imageUpload`,
+        requestOptions
+      );
       if (response.ok) {
         const result = await response.json();
 
@@ -85,14 +85,14 @@ const Register = () => {
       //   "http://localhost:5001/api/users/register",
       //   requestOptions
       // );
-      const response = await fetch(
-        `https://mern-deploy-vercel-server.vercel.app/api/users/register`,
-        requestOptions
-      );
       // const response = await fetch(
-      //   `${serverURL}/api/users/register`,
+      //   `https://mern-deploy-vercel-server.vercel.app/api/users/register`,
       //   requestOptions
       // );
+      const response = await fetch(
+        `${serverURL}/api/users/register`,
+        requestOptions
+      );
       const result = await response.json();
       console.log("register success>>>", result);
     } catch (error) {
