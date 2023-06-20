@@ -9,3 +9,11 @@ export default defineConfig({
     port: 5174,
   },
 });
+
+//NOTE for React Apps created with CRA , to select the port, modifice the "start" script in package.json
+
+// "scripts": {
+//   "start": "PORT 6666 react-scripts start",
+//   "build": "react-scripts build",
+//  ......
+// }
