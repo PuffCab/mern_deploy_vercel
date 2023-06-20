@@ -32,15 +32,15 @@ const Register = () => {
     };
 
     try {
-      const response = await fetch(
-        "http://localhost:5001/api/users/imageUpload",
-        requestOptions
-      );
-
       // const response = await fetch(
-      //   `https://mern-deploy-vercel-phi.vercel.app/api/users/imageUpload`,
+      //   "http://localhost:5001/api/users/imageUpload",
       //   requestOptions
       // );
+
+      const response = await fetch(
+        `https://mern-deploy-vercel-server.vercel.app/api/users/imageUpload`,
+        requestOptions
+      );
       // const response = await fetch(
       //   `${serverURL}/api/users/imageUpload`,
       //   requestOptions
@@ -81,14 +81,14 @@ const Register = () => {
     };
 
     try {
-      const response = await fetch(
-        "http://localhost:5001/api/users/register",
-        requestOptions
-      );
       // const response = await fetch(
-      //   `https://mern-deploy-vercel-phi.vercel.app/api/users/register`,
+      //   "http://localhost:5001/api/users/register",
       //   requestOptions
       // );
+      const response = await fetch(
+        `https://mern-deploy-vercel-server.vercel.app/api/users/register`,
+        requestOptions
+      );
       // const response = await fetch(
       //   `${serverURL}/api/users/register`,
       //   requestOptions

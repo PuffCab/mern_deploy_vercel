@@ -19,14 +19,14 @@ const Profile = () => {
       };
 
       try {
-        const response = await fetch(
-          "http://localhost:5001/api/users/userProfile",
-          requestOptions
-        );
         // const response = await fetch(
-        //   `https://mern-deploy-vercel-phi.vercel.app/api/users/userProfile`,
+        //   "http://localhost:5001/api/users/userProfile",
         //   requestOptions
         // );
+        const response = await fetch(
+          `https://mern-deploy-vercel-server.vercel.app/api/users/userProfile`,
+          requestOptions
+        );
         // const response = await fetch(
         //   `${serverURL}/api/users/userProfile`,
         //   requestOptions
