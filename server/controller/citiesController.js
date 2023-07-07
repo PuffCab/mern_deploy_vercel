@@ -2,7 +2,7 @@ import citiesModel from "../models/citiesModel.js";
 
 const getAllCities = async (request, response) => {
   //   console.log("this is a getAll cities request");
-  console.log("request >>>>", request);
+  // console.log("request >>>>", request);
   const allCities = await citiesModel
     .find({})
     .populate({ path: "museums", select: ["name", "price"] });
