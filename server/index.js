@@ -39,7 +39,6 @@ const addMiddlewares = () => {
   const allowedOrigins = [
     "http://localhost:5174",
     "https://mern-deploy-vercel-client.vercel.app",
-    "https://mern-deploy-vercel-server.vercel.app",
   ];
   const corsOptions = {
     origin: function (origin, callback) {
@@ -51,8 +50,8 @@ const addMiddlewares = () => {
     },
   };
 
-  // app.use(cors());
-  app.use(cors(corsOptions));
+  app.use(cors());
+  // app.use(cors(corsOptions));
   cloudinaryConfig();
 
   app.use(passport.initialize());
