@@ -53,17 +53,17 @@ const Login = () => {
 
     try {
       //!fetching ONLY with local host
-      // const response = await fetch(
-      //   "http://localhost:5001/api/users/login",
-      //   requestOptions
-      // );
-
-      //REVIEW[epic=deploy, seq=5] 5-Once we deployed the server, we fetch the data from our API using vercel's URL+Endpoint
-      //! fetching ONLY with deployed (server) URL
       const response = await fetch(
-        "https://mern-deploy-vercel-server.vercel.app/api/users/login",
+        "http://localhost:5001/api/users/login",
         requestOptions
       );
+      console.log(" import.meta.env.MODE :>> ", import.meta.env.MODE);
+      //REVIEW[epic=deploy, seq=2] 2-Once we deployed the server, we fetch the data from our API using vercel's URL+Endpoint
+      //! fetching ONLY with deployed (server) URL
+      // const response = await fetch(
+      //   "https://mern-deploy-vercel-server.vercel.app/api/users/login",
+      //   requestOptions
+      // );
 
       //! Fetching with either local or deployed URL.
       // const response = await fetch(

@@ -6,6 +6,6 @@
 const serverURL =
   import.meta.env.MODE === "development"
     ? "http://localhost:5001"
-    : "https://mern-deploy-vercel-server.vercel.app";
+    : "https://mern-client-three.vercel.app";
 
 export { serverURL };
