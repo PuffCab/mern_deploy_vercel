@@ -47,8 +47,8 @@ const addMiddlewares = () => {
       //REVIEW[epic=deploy, seq=7] 7- !origin will allow requests with no header (origin===undefined), the direct ones (using directly the server url). This solution will now accept only request from those 2 origins, or with no header.
       //Accepting requests with no header might pose a security threat ...research how convinient the solution is.
 
-      // if (allowedOrigins.indexOf(origin) !== -1 ) {
-      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        // if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
