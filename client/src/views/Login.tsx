@@ -20,7 +20,6 @@ const Login = () => {
     email: "",
     password: "",
   });
-  // const [foo, setFoo] = useState(null);
 
   const [user, setUser] = useState<User | null>({
     userName: "",
