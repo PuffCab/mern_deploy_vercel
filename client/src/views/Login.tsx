@@ -56,7 +56,7 @@ const Login = () => {
         "http://localhost:5001/api/users/login",
         requestOptions
       );
-      console.log(" import.meta.env.MODE :>> ", import.meta.env.MODE);
+
       //REVIEW[epic=deploy, seq=2] 2-Once we deployed the server, we fetch the data from our API using vercel's URL+Endpoint
       //! fetching ONLY with deployed (server) URL
       // const response = await fetch(
