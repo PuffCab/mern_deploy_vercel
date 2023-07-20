@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Default Light+",
-  "editor.fontSize": 14,
+  "editor.fontSize": 10,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#3d53f5",
     "activityBar.background": "#3d53f5",
