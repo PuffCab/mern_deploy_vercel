@@ -1,6 +1,7 @@
 //REVIEW[epic=deploy, seq=1] 1-Get rid of all errors and warnings (unused import of react in ln2, unused state var in ln 23)
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { checkUserStatus } from "../utils/checkUserStatus";
+import { serverURL } from "../utils/serverURL";
 // import { serverURL } from "../utils/serverURL";
 
 type User = {
@@ -59,16 +60,16 @@ const Login = () => {
 
       //REVIEW[epic=deploy, seq=2] 2-Once we deployed the server, we fetch the data from our API using vercel's URL+Endpoint
       //! fetching ONLY with deployed (server) URL
-      const response = await fetch(
-        "https://mern-deploy-vercel-server.vercel.app/api/users/login",
-        requestOptions
-      );
-
-      //! Fetching with either local or deployed URL.
       // const response = await fetch(
-      //   `${serverURL}/api/users/login`,
+      //   "https://mern-deploy-vercel-server.vercel.app/api/users/login",
       //   requestOptions
       // );
+
+      //! Fetching with either local or deployed URL.
+      const response = await fetch(
+        `${serverURL}/api/users/login`,
+        requestOptions
+      );
       console.log("response", response);
 
       if (response.ok) {
