@@ -37,7 +37,7 @@ const addMiddlewares = () => {
 
   //REVIEW[epic=deploy, seq=3] 3-the first origin should be the localhost port our client runs on. The second one, vercel's URL for our client
   const allowedOrigins = [
-    "http://localhost:5174",
+    "http://localhost:5175",
     // "http://localhost:5001",
     "https://mern-client-three.vercel.app/",
   ];
