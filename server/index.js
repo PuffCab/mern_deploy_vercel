@@ -39,7 +39,7 @@ const addMiddlewares = () => {
   const allowedOrigins = [
     "http://localhost:5175",
     // "http://localhost:5001",
-    "https://mern-client-three.vercel.app/",
+    "https://mern-client-three.vercel.app",
   ];
   const corsOptions = {
     origin: function (origin, callback) {
